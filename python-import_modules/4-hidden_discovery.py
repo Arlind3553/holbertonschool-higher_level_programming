@@ -5,4 +5,3 @@ if __name__ == "__main__":
     for i in name:
         if i[0] != "_":
             print(i)
-
