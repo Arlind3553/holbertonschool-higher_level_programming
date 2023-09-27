@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 i = 122
-while i >= 97:
-    print(chr(i), end="")
-    i = i - 33
-    print(chr(i), end="")
-    i = i + 31
+j = 89
+while i >= 97 and j >= 65:
+    print("{}{}".format(chr(i), chr(j)), end="")
+    i = i - 2
+    j = j - 2
