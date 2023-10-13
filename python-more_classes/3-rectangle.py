@@ -45,3 +45,13 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * self.width + 2 * self.height
+    def __str__(self):
+        if self.__width == 0 or self.__height == 0:
+            return ("")
+        new_rec = []
+        for x in range(self.__height):
+            for y in range(self.__width):
+                new_rec.append("#")
+            if x < self.__height - 1:
+                new_rec.append("\n")
+        return "".join(new_rec)
