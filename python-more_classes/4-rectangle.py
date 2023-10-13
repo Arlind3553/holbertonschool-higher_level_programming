@@ -56,5 +56,6 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-        def __repr__(self):
-            return f"Rectangle({self.__width}, {self.__height})"
+
+    def __repr__(self):
+        return f"Rectangle({self.__width}, {self.__height})"
