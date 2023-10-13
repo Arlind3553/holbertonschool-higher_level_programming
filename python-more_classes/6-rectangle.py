@@ -11,6 +11,7 @@ class Rectangle:
     python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
     """
     number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         Rectangle.number_of_instances += 1
         self.height = height
