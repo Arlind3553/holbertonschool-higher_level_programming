@@ -10,9 +10,9 @@ class Rectangle:
     python3 -c 'print(__import__("my_module").my_function.__doc__)'
     python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
     """
-    numberofinstances = 0
+    number_of_instances = 0
     def __init__(self, width=0, height=0):
-        Rectangle.numberofinstances += 1
+        Rectangle.number_of_instances += 1
         self.height = height
         self.width = width
 
@@ -63,5 +63,5 @@ class Rectangle:
         return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
-        Rectangle.numberofinstances =- 1
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
