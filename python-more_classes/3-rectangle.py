@@ -11,8 +11,8 @@ class Rectangle:
     python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
     """
     def __init__(self, width=0, height=0):
-        self.height = height
         self.width = width
+        self.height = height
 
     @property
     def width(self):
