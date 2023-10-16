@@ -11,7 +11,7 @@ class Rectangle:
     python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
     """
     number_of_instances = 0
-    print_symbol = '#'
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         Rectangle.number_of_instances += 1
@@ -50,15 +50,6 @@ class Rectangle:
             return 0
         return 2 * self.width + 2 * self.height
 
-    def bigger_or_equal(rect_1, rect_2):
-        if not isinstance(rect_1, Rectangle):
-            raise TypeError("rect_1 must be an instance of Rectangle")
-        if not isinstance(rect_2, Rectangle):
-            raise TypeError("rect_2 must be an instance of Rectangle")
-        if rect_1.area() >= rect_2.area():
-            return rect_1
-        return rect_2
-
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
             return ("")
@@ -70,12 +61,28 @@ class Rectangle:
                 new_rec.append("\n")
         return "".join(new_rec)
 
-    def square(cls, size=0):
-        return cls(size, size)
-
     def __repr__(self):
         return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
+            return rect_1
+        else:
+            return rect_2
+
+    @classmethod
+    def square(cls, size=0):
+        """
+        Class method for creating a square
+        instance
+        """
+        return cls(size, size)
