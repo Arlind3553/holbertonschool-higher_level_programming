@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 '''Module for loading, adding and saving'''
 
-
 import os
 from sys import argv
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
