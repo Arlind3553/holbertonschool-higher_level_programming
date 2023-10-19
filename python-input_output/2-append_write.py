@@ -9,6 +9,6 @@ def append_write(filename="", text=""):
     'print(__import__("my_module").my_function.__doc__)'
     python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
     """
-    with open(filename, 'w', encoding='utf-8') as file:
+    with open(filename, 'a', encoding='utf-8') as file:
         file.write(text)
         return len(text)
