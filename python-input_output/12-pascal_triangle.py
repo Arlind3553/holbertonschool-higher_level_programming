@@ -5,7 +5,7 @@
 def pascal_triangle(n):
     tmp = [1, 1]
     matrix = []
-    if n >= :
+    if n >= 1:
         matrix.append([1])
         n -= 1
     if n >= 1:
