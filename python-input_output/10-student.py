@@ -14,7 +14,7 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        d={}
+        d = {}
         if attrs is None:
             for attr, value in self.__dict__.items():
                 d[attr] = value
