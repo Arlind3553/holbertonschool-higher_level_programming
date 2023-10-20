@@ -1,13 +1,9 @@
 #!/usr/bin/python3
-"""
-python3 -c 'print(__import__("my_module").__doc__)'
-"""
+"""Student class Module"""
 
 
 class Student:
-    """
-    python3 -c 'print(__import__("my_module").MyClass.__doc__)'
-    """
+    """Class named student"""
     def __init__(self, first_name, last_name, age):
         self.first_name = first_name
         self.last_name = last_name
@@ -28,4 +24,4 @@ class Student:
     def reload_from_json(self, json):
         for attr in json.keys():
             if attr in self.__dict__.keys():
-                self.__dict__[keys] = json[attr]
+                self.__dict__[attr] = json[attr]
