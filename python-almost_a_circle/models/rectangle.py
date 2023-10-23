@@ -90,3 +90,17 @@ class Rectangle(Base):
     def __str__(self):
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}\
 /{self.height}"
+
+    def update(self, *args):
+        """updates rectangle object values"""
+        for index, value in enumerate(args):
+            if index == 0:
+                self.id = args[i]
+            if index == 1:
+                self.width = args[i]
+            if index == 2:
+                self.height = args[i]
+            if index == 3:
+                self.x = args[i]
+            if index = 4:
+                self.y = args[i]
