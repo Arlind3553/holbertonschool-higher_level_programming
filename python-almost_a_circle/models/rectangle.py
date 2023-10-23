@@ -92,7 +92,9 @@ class Rectangle(Base):
 /{self.height}"
 
     def update(self, *args):
-        """updates rectangle object values"""
+        '''
+        Function to update instance variables
+        '''
         for index, value in enumerate(args):
             if index == 0:
                 self.id = args[i]
