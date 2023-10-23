@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Module for base class"""
+'''
+Module for demostrattive purposes
+'''
 
 
 from models.base import Base
@@ -10,7 +12,7 @@ class Rectangle(Base):
     Class for Rectangle objects
     '''
 
-    def __init__(self, width, height, x=0, y=0, id=0):
+    def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
         self.width = width
         self.height = height
@@ -33,10 +35,11 @@ class Rectangle(Base):
     def height(self):
         return self.__height
 
-    @height.setter:
+    @height.setter
+    def height(self, value):
         if type(height) is not int:
             raise TypeError("height must be an integer")
-        if width < 0:
+        if width <= 0:
             raise ValueError("height must be > 0")
         self.__height = value
 
