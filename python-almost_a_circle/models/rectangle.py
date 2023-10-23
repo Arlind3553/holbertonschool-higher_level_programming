@@ -104,5 +104,5 @@ class Rectangle(Base):
                 self.height = args[i]
             if index == 3:
                 self.x = args[i]
-            if index = 4:
+            if index == 4:
                 self.y = args[i]
