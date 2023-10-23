@@ -97,12 +97,12 @@ class Rectangle(Base):
         '''
         for index, value in enumerate(args):
             if index == 0:
-                self.id = args[i]
+                self.id = args[index]
             if index == 1:
-                self.width = args[i]
+                self.width = args[index]
             if index == 2:
-                self.height = args[i]
+                self.height = args[index]
             if index == 3:
-                self.x = args[i]
+                self.x = args[index]
             if index == 4:
-                self.y = args[i]
+                self.y = args[index]
