@@ -43,10 +43,9 @@ class Square(Rectangle):
         python3 -c 'print(__import__("my_module").my_function.__doc__)'
         python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
         """
-        my_dict = {
-                "id" = self.id
-                "size" = self.size
-                "x" = self.x
-                "y" = self.y
+        return {
+                "id" = self.id,
+                "size" = self.size,
+                "x" = self.x,
+                "y" = self.y,
                 }
-        return my_dict
