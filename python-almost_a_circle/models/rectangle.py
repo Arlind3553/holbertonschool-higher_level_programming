@@ -123,7 +123,11 @@ class Rectangle(Base):
         '''
         Function that returns the dictionary representation of a Rectangle
         '''
-        dic = {}
-        for key, value in self.__dict__.items():
-            dic[key] = value
-        return dic
+        dict_i = {
+                "id": self.id,
+                "width": self.width,
+                "height": self.height,
+                "x": self.x,
+                "y": self.y
+                }
+        return dict_i
