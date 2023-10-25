@@ -4,6 +4,9 @@ Module for demostrattive purposes
 '''
 
 
+import json
+
+
 class Base:
     '''
     Class for Base objects
