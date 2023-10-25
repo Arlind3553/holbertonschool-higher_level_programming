@@ -28,6 +28,9 @@ class Square(Rectangle):
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
 
     def update(self, *args, **kwargs):
+        '''
+        Function to update instance attributes
+        '''
         name_list = ['id', 'size', 'x', 'y']
         for i in range(len(args)):
             setattr(self, name_list[i], args[i])
