@@ -39,9 +39,10 @@ class Square(Rectangle):
             setattr(self, key, value)
 
     def to_dictionary(self):
-        '''
-        Function to return the dictionary representation
-        '''
+        """
+        python3 -c 'print(__import__("my_module").my_function.__doc__)'
+        python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
+        """
         my_dict = {
                 "id" = self.id
                 "size" = self.size
