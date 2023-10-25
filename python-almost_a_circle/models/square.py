@@ -42,4 +42,10 @@ class Square(Rectangle):
         '''
         Function to return the dictionary representation
         '''
-        return self.__dict__
+        my_dict = {
+                "id" = self.id
+                "size" = self.size
+                "x" = self.x
+                "y" = self.y
+                }
+        return my_dict
