@@ -40,3 +40,12 @@ class Base:
                 dic.append(obj.to_dictionary())
         with open(cls.__name__ + ".json", 'w') as f:
             f.write(cls.to_json_string(dic))
+
+    @staticmethod
+    '''
+    Static method that returns the list of the Json string represenation
+    '''
+    def from_json_string(json_string):
+        if json_string is None or json_string == []:
+            return []
+        return json.loads(json_string)
