@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """module for gettin states that start with letter n"""
 import MySQLdb
-import sys
+from sys import argv
 
 
 if __name__ == '__main__':
