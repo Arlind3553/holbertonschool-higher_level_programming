@@ -10,10 +10,12 @@ from model_state import Base, State
 from SQLAlchemy import create_engine
 
 if __name__ == '__main__':
-    eng = create_engine(f"mysql+mysqldb://{argv[1]}:{argv[2]}@localhost:3306/{argv[3]}")
+    db = "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
+        sys.argv[1], sys.argv[2], sys.argv[3])
+    eng = create_engine(db)
     Base.metadata.create_all(eng)
     session = Session(eng)
-    q = session.query(State).all()
-    for row in q:
-        print(f"{row.id}: {row.state}")
+    states = session.query(State).order_by(State.id).all()
+    for state in states:
+        print(f"{state.id}: {state.name}")
     session.close()
