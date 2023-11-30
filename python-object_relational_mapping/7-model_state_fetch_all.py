@@ -4,10 +4,11 @@ List all states from the database hbtn_0e_0_usa
 """
 
 
-from SQLAlchemy.orm import Session
-from sys import argv
+from sqlalchemy.orm import Session
+import sys
 from model_state import Base, State
-from SQLAlchemy import create_engine
+from sqlalchemy import create_engine
+
 
 if __name__ == '__main__':
     db = "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
