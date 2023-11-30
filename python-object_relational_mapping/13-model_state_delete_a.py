@@ -16,8 +16,4 @@ if __name__ == '__main__':
     eng = create_engine(db)
     Base.metadata.create_all(eng)
     session = Session(eng)
-    state = session.query(State).filter_by(id=2).first()
-    if state:
-        state.name = "New Mexico"
-        sesion.commit()
     session.close()
