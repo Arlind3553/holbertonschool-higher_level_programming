@@ -16,11 +16,9 @@ if __name__ == '__main__':
     eng = create_engine(db)
     Base.metadata.create_all(eng)
     session = Session(eng)
-    states = session.query(State).order_by(State.id).all()
-    for row in states:
-        if sys.argv[4] == row.name:
-            print(f"{row.id}")
-        else:
-            print("Not found")
-            break
-    session.close()
+    result = session.query(State).filter(State.name == sys.argv[4]).first()
+    if result is None:
+        print('Not found')
+    else:
+        print('{0}'.format(result.id))
+    session.close
